@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		52DADDFC2D1ACB8D009C839A /* WebServe in Frameworks */ = {isa = PBXBuildFile; productRef = 52DADDFB2D1ACB8D009C839A /* WebServe */; };
+		52DADE0E2D1AD72A009C839A /* CommonModel in Frameworks */ = {isa = PBXBuildFile; productRef = 52DADE0D2D1AD72A009C839A /* CommonModel */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		52DADD802D19D0C6009C839A /* CoinTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		528E7E532D1AF69F00EBEA90 /* Exceptions for "CoinTracker" folder in "CoinTracker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 52DADD7F2D19D0C6009C839A /* CoinTracker */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		52DADD822D19D0C6009C839A /* CoinTracker */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				528E7E532D1AF69F00EBEA90 /* Exceptions for "CoinTracker" folder in "CoinTracker" target */,
+			);
 			path = CoinTracker;
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DADDFC2D1ACB8D009C839A /* WebServe in Frameworks */,
+				52DADE0E2D1AD72A009C839A /* CommonModel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				52DADD822D19D0C6009C839A /* CoinTracker */,
+				52DADDFA2D1ACB8D009C839A /* Frameworks */,
 				52DADD812D19D0C6009C839A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +64,13 @@
 				52DADD802D19D0C6009C839A /* CoinTracker.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		52DADDFA2D1ACB8D009C839A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +93,8 @@
 			);
 			name = CoinTracker;
 			packageProductDependencies = (
+				52DADDFB2D1ACB8D009C839A /* WebServe */,
+				52DADE0D2D1AD72A009C839A /* CommonModel */,
 			);
 			productName = CoinTracker;
 			productReference = 52DADD802D19D0C6009C839A /* CoinTracker.app */;
@@ -254,11 +284,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoinTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,11 +314,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoinTracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoinTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,6 +356,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52DADDFB2D1ACB8D009C839A /* WebServe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WebServe;
+		};
+		52DADE0D2D1AD72A009C839A /* CommonModel */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonModel;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52DADD782D19D0C6009C839A /* Project object */;
 }
