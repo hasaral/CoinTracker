@@ -14,11 +14,13 @@ import CommonModel
 @Observable class CoinsViewModel {
 
     var webRepository = RealCoinWebRepository(session: configuredURLSession())
+    var coinList: CoinListModel?
+    var coinElement: CoinCommonModel?
     
     init() {
         
     }
-    
+
     private static func configuredURLSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 60
@@ -30,17 +32,16 @@ import CommonModel
         return URLSession(configuration: configuration)
     }
     
-    
     func fetchData() {
         Task {
-            let coinElement = try? await webRepository.getCoinss(limit: "10", page: "0")
+            coinElement = try? await webRepository.getCoinss(limit: "10", page: "0")
             print(coinElement)
         }
     }
     
     func fetchDataCoinList() {
         Task {
-            let coinList = try? await webRepository.getCoinsList()
+            coinList = try? await webRepository.getCoinsList()
             print(coinList)
         }
     }

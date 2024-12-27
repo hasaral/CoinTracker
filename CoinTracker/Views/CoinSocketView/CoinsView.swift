@@ -16,7 +16,7 @@ struct CoinsView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("viewModel.coinElement?.message ?? ")
+            Text(viewModel.coinList?.response ?? "")
                 .onAppear() {
                     //viewModel.fetchData()
                     viewModel.fetchDataCoinList()

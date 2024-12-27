@@ -1,53 +1,15 @@
 //
-//  CurrentValueAsyncStream.swift
-//  WebServe
-//
-//  Created by Hasan Saral on 24.12.2024.
-//
-
-
-//
-//  CurrentValueAsyncStream.swift
+//  File.swift
 //  CoinTracker
 //
-//  Created by Hasan Saral on 24.12.2024.
+//  Created by Hasan Saral on 27.12.2024.
 //
 
 
 import Foundation
 
-class CurrentValueAsyncStream<T> {
-    private var currentValue: T
-    private var continuation: AsyncStream<T>.Continuation?
-
-    init(initialValue: T) {
-        self.currentValue = initialValue
-    }
-
-    private(set) lazy var stream: AsyncStream<T> = {
-        AsyncStream { continuation in
-            self.continuation = continuation
-            continuation.yield(currentValue)
-        }
-    }()
-
-    func updateValue(_ newValue: T) {
-        currentValue = newValue
-        continuation?.yield(newValue)
-    }
-
-    func getCurrentValue() -> T {
-        return currentValue
-    }
-
-    func finish() {
-        continuation?.finish()
-    }
-}
-
-public extension AsyncStream {
-    /// Combines the latest values from `self` and another `AsyncStream` into a single `AsyncStream` of tuples.
-    func combineLatest<U>(
+ public extension AsyncStream {
+     func combineLatest<U>(
         with otherStream: AsyncStream<U>
     ) -> AsyncStream<(Element, U)> {
         AsyncStream<(Element, U)> { continuation in
@@ -90,4 +52,3 @@ public extension AsyncStream {
         }
     }
 }
-

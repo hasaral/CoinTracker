@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528E80162D1EA92400EBEA90 /* Utilities in Frameworks */ = {isa = PBXBuildFile; productRef = 528E80152D1EA92400EBEA90 /* Utilities */; };
 		52DADDFC2D1ACB8D009C839A /* WebServe in Frameworks */ = {isa = PBXBuildFile; productRef = 52DADDFB2D1ACB8D009C839A /* WebServe */; };
 		52DADE0E2D1AD72A009C839A /* CommonModel in Frameworks */ = {isa = PBXBuildFile; productRef = 52DADE0D2D1AD72A009C839A /* CommonModel */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52DADDFC2D1ACB8D009C839A /* WebServe in Frameworks */,
+				528E80162D1EA92400EBEA90 /* Utilities in Frameworks */,
 				52DADE0E2D1AD72A009C839A /* CommonModel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,7 @@
 			packageProductDependencies = (
 				52DADDFB2D1ACB8D009C839A /* WebServe */,
 				52DADE0D2D1AD72A009C839A /* CommonModel */,
+				528E80152D1EA92400EBEA90 /* Utilities */,
 			);
 			productName = CoinTracker;
 			productReference = 52DADD802D19D0C6009C839A /* CoinTracker.app */;
@@ -358,6 +361,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		528E80152D1EA92400EBEA90 /* Utilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Utilities;
+		};
 		52DADDFB2D1ACB8D009C839A /* WebServe */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WebServe;
